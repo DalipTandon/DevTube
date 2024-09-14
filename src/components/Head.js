@@ -2,11 +2,17 @@ import React from "react";
 import hamburger from "../img/hamburger.jpg"
 import devtube from "../img/devtube.png"
 import Profile from "../img/profile.jpg"
+import { toggleMenu } from "../utils/AppSlice";
+import { useDispatch } from "react-redux";
 const Head=()=>{
+    const dispatch=useDispatch();
+    const toggleMenuHandler=()=>{
+        dispatch(toggleMenu());
+    }
     return (
         <div className="grid grid-flow-col  shadow-md">
             <div className="flex col-span-1 gap-3">
-                <img className="h-12 m-2 cursor-pointer px-3" src={hamburger} alt="Menu"/>
+                <img className="h-12 m-2 cursor-pointer px-3" onClick={()=>toggleMenuHandler()} src={hamburger} alt="Menu"/>
                 <img className="h-20 w-28- cursor-pointer" src={devtube} alt="logo"/>
             </div>
             <div className="col-span-10 m-2  flex justify-center items-center "> 
