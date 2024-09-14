@@ -10,9 +10,9 @@ const Head=()=>{
         dispatch(toggleMenu());
     }
     return (
-        <div className="grid grid-flow-col  shadow-md">
+        <div className="grid grid-flow-col  shadow-md  sticky top-0 bg-white z-10 ">
             <div className="flex col-span-1 gap-3">
-                <img className="h-12 m-2 cursor-pointer px-3" onClick={()=>toggleMenuHandler()} src={hamburger} alt="Menu"/>
+                <img className="h-12 m-2 cursor-pointer px-3 " onClick={()=>toggleMenuHandler()} src={hamburger} alt="Menu"/>
                 <img className="h-20 w-28- cursor-pointer" src={devtube} alt="logo"/>
             </div>
             <div className="col-span-10 m-2  flex justify-center items-center "> 

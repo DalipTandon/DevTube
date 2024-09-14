@@ -6,7 +6,7 @@ const Sidebar=()=>{
 
   if(!isMenuOpen)return null;
     return (
-        <div className="col-span-1  shadow-md ">
+        <div className=" w-56  shadow-md h-screen sticky top-0">
             <ul className=" p-4 m-2 font-normal my-3 py-3 text-xl cursor-pointer gap-2 flex flex-col">
                 <li><i className="ri-home-2-fill"></i>Home</li>
                 <li><i className="ri-movie-line"></i>Subscription</li>
