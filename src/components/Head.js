@@ -13,7 +13,7 @@ const Head=()=>{
         <div className="grid grid-flow-col  shadow-md  sticky top-0 bg-white z-10 ">
             <div className="flex col-span-1 gap-3">
                 <img className="h-12 m-2 cursor-pointer px-3 " onClick={()=>toggleMenuHandler()} src={hamburger} alt="Menu"/>
-                <img className="h-20 w-28- cursor-pointer" src={devtube} alt="logo"/>
+              <a href="/">  <img className="h-20 w-28- cursor-pointer" src={devtube} alt="logo"/> </a>
             </div>
             <div className="col-span-10 m-2  flex justify-center items-center "> 
                 <input className="  px-10 h-10 w-1/2 p-2 rounded-l-full border border-gray-500 " type="text" placeholder="Search"/>
