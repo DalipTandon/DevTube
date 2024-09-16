@@ -8,7 +8,7 @@ const useYData = (YOUTUBE_API) => {
       const data = await fetch(YOUTUBE_API);
       const json = await data.json();
       setVideos(json.items);
-      
+            
     };
 
     getVideoData(); // calling the function inside useEffect

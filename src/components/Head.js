@@ -3,16 +3,23 @@ import hamburger from "../img/hamburger.jpg"
 import devtube from "../img/devtube.png"
 import Profile from "../img/profile.jpg"
 import { toggleMenu } from "../utils/AppSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { SEARCH_API } from "../utils/config";
+import { cacheResult } from "../utils/SearchSlice";
+// import { cacheResult } from "../utils/SearchSlice";
 const Head=()=>{
     const[search,setSearch]=useState("");
     const[suggestions,setSuggestions]=useState([]);
     const[isVisible,setIsVisile]=useState(false);
+    const searchCache=useSelector((store)=>store.search);
   useEffect(()=>{
     
 const fn=setTimeout(()=>{
+    if(searchCache[search]){
+        setSuggestions(searchCache[search]);
+    }else{
    getSearch();
+    }
 },200)
   
 return()=>{
@@ -25,7 +32,9 @@ return()=>{
     const json=await data.json();
 
     setSuggestions(json[1]);
-   
+   dispatch(cacheResult({
+    [search]:json[1],
+   }));
   }
     
     const dispatch=useDispatch();
