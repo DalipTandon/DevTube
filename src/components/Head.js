@@ -32,7 +32,8 @@ return()=>{
     const json=await data.json();
 
     setSuggestions(json[1]);
-   dispatch(cacheResult({
+   dispatch(
+    cacheResult({
     [search]:json[1],
    }));
   }
