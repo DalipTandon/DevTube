@@ -6,6 +6,7 @@ import { toggleMenu } from "../utils/AppSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { SEARCH_API } from "../utils/config";
 import { cacheResult } from "../utils/SearchSlice";
+import DarkMode from "./DarkMode";
 // import { cacheResult } from "../utils/SearchSlice";
 const Head=()=>{
     const[search,setSearch]=useState("");
@@ -67,6 +68,7 @@ return()=>{
             )}
             </div>
             <div className="col-span-1  flex justify-center">
+                <DarkMode/>
                 <img className="h-16 w-16 cursor-pointer" src={Profile} alt="profile"/>
             </div>
         </div>

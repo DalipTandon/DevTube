@@ -40,8 +40,8 @@ const LiveContainer=()=>{
             setLiveMessage("");
         }
         }>
-          <input className="w-96 bg-slate-100 border border-black p-1 rounded-sm" type="text" value={liveMessage} onChange={(e)=>setLiveMessage(e.target.value)}/>
-          <button className="w-20 p-1 bg-gray-100">Send</button>
+          <input className="w-96 bg-slate-100 border border-black p-1 rounded-sm text-black"  type="text" value={liveMessage} onChange={(e)=>setLiveMessage(e.target.value)}/>
+          <button className="w-20 p-1 bg-black-100">Send</button>
         </form>
         </>
     )
